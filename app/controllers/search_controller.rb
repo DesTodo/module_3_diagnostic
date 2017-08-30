@@ -7,7 +7,8 @@ class SearchController < ApplicationController
       faraday.adapter Faraday.default_adapter
     end
 
-    response = @conn.get("/alt-fuel-stations/v1.json?fuel_type=E85,ELEC&state=CA&limit=2")
+    response = @conn.get('/api/alt-fuel-stations/v1')
+    #{}"/api/alt-fuel-stations/v1/nearest.format?location=#{zipcode}")
 
     @stations = JSON.parse(response.body, symbolize_names: true)
   end
