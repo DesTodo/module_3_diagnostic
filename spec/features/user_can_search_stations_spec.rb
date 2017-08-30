@@ -4,8 +4,8 @@ RSpec.describe "homepage stations search", :type => :feature do
   describe "user searches stations by zipcode" do
 
     visit '/'
+
     find('form-control').set('80203')
-    fill_in['form-control'], with:'80203'
     click_on['Locate']
 
     expect current_path.to eq("/search")
