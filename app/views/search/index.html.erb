@@ -1,6 +1,6 @@
 <h3> Search Results: </h3>
 
-<p> stations within <%= params[:q] %> found: <%= stations.count %> </p>
+<p> stations within <%= params[:q] %> found: <%= @stations.count %> </p>
 
 <% @stations.each do |station| %>
 <ul class = "station">
